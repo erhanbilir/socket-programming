@@ -27,7 +27,7 @@ int main()
         return 1;
     }
 
-    cout << "[+]: UDP Server dinliyor..." << endl;
+    cout << "[+]: UDP Server is listening..." << endl;
 
     while(true)
     {
@@ -42,7 +42,7 @@ int main()
         }
 
         cout << "[Client -> ]: " << buffer << endl;
-        const char* msg = "Merhaba, ben server. Mesajini aldim!";
+        const char* msg = "Hello, I'm server. I got your message!";
         int sendStatus = sendto(udpSock, msg, strlen(msg), 0, (struct sockaddr*)&clientAddr, clientAddrSize);
         if( sendStatus < 0 )
         {

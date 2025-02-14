@@ -22,7 +22,7 @@ int main()
     
     socklen_t serverAddrSize = sizeof(serverAddr);
 
-    const char* msg = "Merhaba, ben client!";
+    const char* msg = "Hello, I'm client!";
     int sendStatus = sendto(udpSock, msg, strlen(msg), 0, (struct sockaddr*)&serverAddr, sizeof(serverAddr));
     if( sendStatus < 0 )
     {
